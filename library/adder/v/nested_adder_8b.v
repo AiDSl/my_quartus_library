@@ -1,0 +1,268 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// PROGRAM		"Quartus Prime"
+// VERSION		"Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition"
+// CREATED		"Mon Oct 28 19:18:53 2019"
+
+module nested_adder_8b(
+	I,
+	A,
+	B,
+	CarryOut,
+	N,
+	Z,
+	O,
+	S
+);
+
+
+input wire	I;
+input wire	[7:0] A;
+input wire	[7:0] B;
+output wire	CarryOut;
+output wire	N;
+output wire	Z;
+output wire	O;
+output wire	[7:0] S;
+
+wire	[7:0] S_ALTERA_SYNTHESIZED;
+wire	SYNTHESIZED_WIRE_0;
+wire	SYNTHESIZED_WIRE_1;
+wire	SYNTHESIZED_WIRE_2;
+wire	SYNTHESIZED_WIRE_3;
+wire	SYNTHESIZED_WIRE_4;
+wire	SYNTHESIZED_WIRE_5;
+wire	SYNTHESIZED_WIRE_6;
+wire	SYNTHESIZED_WIRE_7;
+wire	SYNTHESIZED_WIRE_8;
+wire	SYNTHESIZED_WIRE_9;
+wire	SYNTHESIZED_WIRE_10;
+wire	SYNTHESIZED_WIRE_47;
+wire	SYNTHESIZED_WIRE_12;
+wire	SYNTHESIZED_WIRE_48;
+wire	SYNTHESIZED_WIRE_14;
+wire	SYNTHESIZED_WIRE_15;
+wire	SYNTHESIZED_WIRE_16;
+wire	SYNTHESIZED_WIRE_17;
+wire	SYNTHESIZED_WIRE_18;
+wire	SYNTHESIZED_WIRE_19;
+wire	SYNTHESIZED_WIRE_20;
+wire	SYNTHESIZED_WIRE_21;
+wire	SYNTHESIZED_WIRE_22;
+wire	SYNTHESIZED_WIRE_23;
+wire	SYNTHESIZED_WIRE_24;
+wire	SYNTHESIZED_WIRE_25;
+wire	SYNTHESIZED_WIRE_26;
+wire	SYNTHESIZED_WIRE_27;
+wire	SYNTHESIZED_WIRE_28;
+wire	SYNTHESIZED_WIRE_29;
+wire	SYNTHESIZED_WIRE_30;
+wire	SYNTHESIZED_WIRE_31;
+wire	SYNTHESIZED_WIRE_32;
+wire	SYNTHESIZED_WIRE_33;
+wire	SYNTHESIZED_WIRE_34;
+wire	SYNTHESIZED_WIRE_35;
+wire	SYNTHESIZED_WIRE_36;
+wire	SYNTHESIZED_WIRE_37;
+wire	SYNTHESIZED_WIRE_38;
+wire	SYNTHESIZED_WIRE_39;
+wire	SYNTHESIZED_WIRE_40;
+wire	SYNTHESIZED_WIRE_41;
+wire	SYNTHESIZED_WIRE_42;
+wire	SYNTHESIZED_WIRE_43;
+wire	SYNTHESIZED_WIRE_44;
+
+
+
+
+
+nadder_1b	b2v_inst(
+	.A(A[0]),
+	.B(B[0]),
+	.I(SYNTHESIZED_WIRE_0),
+	.T(SYNTHESIZED_WIRE_27),
+	.S(S_ALTERA_SYNTHESIZED[0]),
+	.C(SYNTHESIZED_WIRE_26));
+
+
+nadder_1b	b2v_inst18(
+	.A(A[1]),
+	.B(B[1]),
+	.I(SYNTHESIZED_WIRE_1),
+	.T(SYNTHESIZED_WIRE_29),
+	.S(S_ALTERA_SYNTHESIZED[1]),
+	.C(SYNTHESIZED_WIRE_28));
+
+
+nadder_1b	b2v_inst27(
+	.A(A[2]),
+	.B(B[2]),
+	.I(SYNTHESIZED_WIRE_2),
+	.T(SYNTHESIZED_WIRE_22),
+	.S(S_ALTERA_SYNTHESIZED[2]),
+	.C(SYNTHESIZED_WIRE_21));
+
+
+nadder_1b	b2v_inst28(
+	.A(A[3]),
+	.B(B[3]),
+	.I(SYNTHESIZED_WIRE_3),
+	.T(SYNTHESIZED_WIRE_24),
+	.S(S_ALTERA_SYNTHESIZED[3]),
+	.C(SYNTHESIZED_WIRE_23));
+
+
+ncarry_terminal	b2v_inst34(
+	.pervC(I),
+	.T(SYNTHESIZED_WIRE_4),
+	.C(SYNTHESIZED_WIRE_5),
+	.I(SYNTHESIZED_WIRE_40),
+	.nextC(CarryOut));
+
+
+nadder_1b	b2v_inst35(
+	.A(A[4]),
+	.B(B[4]),
+	.I(SYNTHESIZED_WIRE_6),
+	.T(SYNTHESIZED_WIRE_17),
+	.S(S_ALTERA_SYNTHESIZED[4]),
+	.C(SYNTHESIZED_WIRE_16));
+
+
+nadder_1b	b2v_inst36(
+	.A(A[5]),
+	.B(B[5]),
+	.I(SYNTHESIZED_WIRE_7),
+	.T(SYNTHESIZED_WIRE_19),
+	.S(S_ALTERA_SYNTHESIZED[5]),
+	.C(SYNTHESIZED_WIRE_18));
+
+
+nadder_1b	b2v_inst37(
+	.A(A[6]),
+	.B(B[6]),
+	.I(SYNTHESIZED_WIRE_8),
+	.T(SYNTHESIZED_WIRE_12),
+	.S(S_ALTERA_SYNTHESIZED[6]),
+	.C(SYNTHESIZED_WIRE_47));
+
+
+nadder_1b	b2v_inst38(
+	.A(A[7]),
+	.B(B[7]),
+	.I(SYNTHESIZED_WIRE_9),
+	.T(SYNTHESIZED_WIRE_14),
+	.S(S_ALTERA_SYNTHESIZED[7]),
+	.C(SYNTHESIZED_WIRE_48));
+
+assign	Z = S_ALTERA_SYNTHESIZED[0] | S_ALTERA_SYNTHESIZED[2] | S_ALTERA_SYNTHESIZED[1] | S_ALTERA_SYNTHESIZED[3] | S_ALTERA_SYNTHESIZED[5] | S_ALTERA_SYNTHESIZED[4] | S_ALTERA_SYNTHESIZED[6] | S_ALTERA_SYNTHESIZED[7];
+
+
+ncarry	b2v_inst41(
+	.ci(SYNTHESIZED_WIRE_10),
+	.C0(SYNTHESIZED_WIRE_47),
+	.T0(SYNTHESIZED_WIRE_12),
+	.C1(SYNTHESIZED_WIRE_48),
+	.T1(SYNTHESIZED_WIRE_14),
+	.i0(SYNTHESIZED_WIRE_8),
+	.i1(SYNTHESIZED_WIRE_9),
+	
+	.T(SYNTHESIZED_WIRE_39),
+	.C(SYNTHESIZED_WIRE_38));
+
+
+ncarry	b2v_inst42(
+	.ci(SYNTHESIZED_WIRE_15),
+	.C0(SYNTHESIZED_WIRE_16),
+	.T0(SYNTHESIZED_WIRE_17),
+	.C1(SYNTHESIZED_WIRE_18),
+	.T1(SYNTHESIZED_WIRE_19),
+	.i0(SYNTHESIZED_WIRE_6),
+	.i1(SYNTHESIZED_WIRE_7),
+	
+	.T(SYNTHESIZED_WIRE_37),
+	.C(SYNTHESIZED_WIRE_36));
+
+
+ncarry	b2v_inst43(
+	.ci(SYNTHESIZED_WIRE_20),
+	.C0(SYNTHESIZED_WIRE_21),
+	.T0(SYNTHESIZED_WIRE_22),
+	.C1(SYNTHESIZED_WIRE_23),
+	.T1(SYNTHESIZED_WIRE_24),
+	.i0(SYNTHESIZED_WIRE_2),
+	.i1(SYNTHESIZED_WIRE_3),
+	
+	.T(SYNTHESIZED_WIRE_34),
+	.C(SYNTHESIZED_WIRE_33));
+
+
+ncarry	b2v_inst44(
+	.ci(SYNTHESIZED_WIRE_25),
+	.C0(SYNTHESIZED_WIRE_26),
+	.T0(SYNTHESIZED_WIRE_27),
+	.C1(SYNTHESIZED_WIRE_28),
+	.T1(SYNTHESIZED_WIRE_29),
+	.i0(SYNTHESIZED_WIRE_0),
+	.i1(SYNTHESIZED_WIRE_1),
+	
+	.T(SYNTHESIZED_WIRE_32),
+	.C(SYNTHESIZED_WIRE_31));
+
+
+ncarry	b2v_inst46(
+	.ci(SYNTHESIZED_WIRE_30),
+	.C0(SYNTHESIZED_WIRE_31),
+	.T0(SYNTHESIZED_WIRE_32),
+	.C1(SYNTHESIZED_WIRE_33),
+	.T1(SYNTHESIZED_WIRE_34),
+	.i0(SYNTHESIZED_WIRE_25),
+	.i1(SYNTHESIZED_WIRE_20),
+	
+	.T(SYNTHESIZED_WIRE_42),
+	.C(SYNTHESIZED_WIRE_41));
+
+
+ncarry	b2v_inst47(
+	.ci(SYNTHESIZED_WIRE_35),
+	.C0(SYNTHESIZED_WIRE_36),
+	.T0(SYNTHESIZED_WIRE_37),
+	.C1(SYNTHESIZED_WIRE_38),
+	.T1(SYNTHESIZED_WIRE_39),
+	.i0(SYNTHESIZED_WIRE_15),
+	.i1(SYNTHESIZED_WIRE_10),
+	
+	.T(SYNTHESIZED_WIRE_44),
+	.C(SYNTHESIZED_WIRE_43));
+
+
+ncarry	b2v_inst49(
+	.ci(SYNTHESIZED_WIRE_40),
+	.C0(SYNTHESIZED_WIRE_41),
+	.T0(SYNTHESIZED_WIRE_42),
+	.C1(SYNTHESIZED_WIRE_43),
+	.T1(SYNTHESIZED_WIRE_44),
+	.i0(SYNTHESIZED_WIRE_30),
+	.i1(SYNTHESIZED_WIRE_35),
+	
+	.T(SYNTHESIZED_WIRE_4),
+	.C(SYNTHESIZED_WIRE_5));
+
+assign	O = SYNTHESIZED_WIRE_47 ^ SYNTHESIZED_WIRE_48;
+
+assign	N = S_ALTERA_SYNTHESIZED[7];
+assign	S = S_ALTERA_SYNTHESIZED;
+
+endmodule
