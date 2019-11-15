@@ -12,4 +12,9 @@ Q&A:
   "More info please:>"
         #Do it yourself,don`t count on me,
         #if you add the question and answer to it also make another people got how it work.
+
+  - depandcy:
+    1,decoder:"need shifter and smaller decoder"
+    2,busmux:"need select this module in .v"
+    3,counter:"signal is hard observe by 'led',you might need tff to show"
 ```
