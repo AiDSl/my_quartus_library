@@ -1,2 +1,7 @@
 # my_quartus_library
-just lots thing I made
+
+
+'''yaml
+Q&A:
+- "How to use?" #put all of it into your project folder,and have fun
+'''
